@@ -46,7 +46,7 @@ class Product(models.Model):
 
     stock = models.PositiveIntegerField()
     description = models.TextField()
-    image = models.ImageField(upload_to="products/", blank=True, null=True)
+    image = models.URLField(max_length=500, blank=True, null=True)
     is_available = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
