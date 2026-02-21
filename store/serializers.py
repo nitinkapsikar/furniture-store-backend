@@ -10,11 +10,6 @@ class CategorySerializer(serializers.ModelSerializer):
             "is_active",
             "created_at"
         ]
-    def get_image(self, obj):
-     request = self.context.get("request")
-     if obj.image and request:
-        return request.build_absolute_uri(obj.image.url)
-     return None
 
 class ProductSerializer(serializers.ModelSerializer):
     category_name = serializers.CharField(
