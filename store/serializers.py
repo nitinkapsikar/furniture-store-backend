@@ -1,7 +1,6 @@
 from rest_framework import serializers
 from .models import Category, Product, Inquiry,Testimonial
 class CategorySerializer(serializers.ModelSerializer):
-    image = serializers.SerializerMethodField()
     class Meta:
         model = Category
         fields = [
